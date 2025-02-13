@@ -1,3 +1,161 @@
+/* Josh Comeau CSS Reset:
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+Typographic tweaks!
+3. Add accessible line-height
+4. Improve text rendering
+*/
 body {
-  background: #000;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Geist Mono", serif;
+}
+/*
+5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+img {
+  height: 50px;
+}
+
+body {
+  font-family: "Roboto", serif;
+  color: #020617;
+}
+
+.content figcaption, h1 {
+  font-family: "Mouse Memoirs", serif;
+  font-size: 3em;
+  margin-bottom: .5cm;
+}
+
+.content figcaption {
+  position: absolute;
+  bottom: 0;
+  font-size: 4em;
+  margin-bottom: 0;
+  color: white;
+  text-shadow: .1cm .3cm .3cm #02061728;
+}
+
+.hero .background, .hero .content > * {
+  box-shadow: .1cm .3cm .3cm #02061728;
+}
+
+.hero > .content,
+footer {
+  padding: 2cm 1cm;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero > .background {
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  background-color: #f472b6;
+  transform: translateY(-50%) skewY(-10deg);
+  z-index: -1;
+  overflow: hidden;
+}
+
+.cinnamoroll {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(./assets/cinnamoroll-logo.png);
+  background-position: -50px;
+  background-size: 2cm;
+  background-repeat: repeat;
+  transform: skewY(10deg) translateY(50%);
+}
+
+.hero > .content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.hero > .content > figure {
+  max-width: max-content;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero > .content > figure img {
+  height: initial;
+}
+
+.hero > .content > div {
+  background-color: white;
+  align-self: center;
+  max-width: 80ch;
+  padding: 1cm .5cm;
+}
+
+.links {
+  margin-top: 1cm;
+  display: flex;
+  gap: .5cm;
+}
+
+.hero .links {
+  justify-content: end;
+}
+
+.links img {
+  height: 1cm;
+}
+
+footer {
+  background-color: #f472b6;
 }
