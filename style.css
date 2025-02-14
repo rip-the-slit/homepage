@@ -135,7 +135,7 @@ footer {
   align-items: center;
 }
 
-.hero > .content > figure img {
+.hero > .content > figure img, footer > img {
   height: initial;
 }
 
@@ -204,4 +204,21 @@ footer {
 footer {
   background-color: #f472b6;
   color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer :nth-child(3) {
+  margin-block: .5cm;
+}
+
+footer > div a {
+  display: flex;
+  gap: 0.2cm;
+  align-items: center;
+  color: white;
+}
+
+footer > div a img {
+  height: 0.5cm;
 }
