@@ -165,14 +165,18 @@
       <div>
         <h1>Contact me</h1>
         <p>
-          Please get in touch if you think our work could be mutually beneficial!
+          Please get in touch if you think our work could be mutually
+          beneficial!
         </p>
         <p>
           1234 Random Road <br />
           Random Town, California 12345
         </p>
         <a href="mailto:riptheslit@heaven.com" class="email"
-          ><img src="./assets/email-outline.svg" alt="" />riptheslit@heaven.com</a
+          ><img
+            src="./assets/email-outline.svg"
+            alt=""
+          />riptheslit@heaven.com</a
         >
         <a href="tel:+1234567890" class="phone"
           ><img src="./assets/phone.svg" alt="" />+1234567890</a
@@ -190,18 +194,22 @@
   </body>
   <script>
     const mql = window.matchMedia("(650px < width <= 950px)");
-    const content = document.querySelector(".hero .content")
-    const fig = content.querySelector("figure")
-    const div = content.querySelector("div")
+    const content = document.querySelector(".hero .content");
+    const fig = content.querySelector("figure");
+    const div = content.querySelector("div");
     if (mql.matches) {
-        div.insertBefore(fig, div.firstChild)
-      }
+      div.insertBefore(fig, div.firstChild);
+    }
     mql.onchange = (e) => {
       if (e.matches) {
-        div.insertBefore(fig, div.firstChild)
+        div.insertBefore(fig, div.firstChild);
       } else {
-        content.insertBefore(fig, content.firstChild)
+        content.insertBefore(fig, content.firstChild);
       }
+    };
+
+    for (const element of document.querySelectorAll("h1, h2, p, figure")) {
+      element.setAttribute("tabindex", 0);
     }
   </script>
 </html>
