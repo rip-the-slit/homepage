@@ -188,4 +188,20 @@
       <img src="./assets/pup covered in dirt.png" alt="" />
     </footer>
   </body>
+  <script>
+    const mql = window.matchMedia("(650px < width <= 950px)");
+    const content = document.querySelector(".hero .content")
+    const fig = content.querySelector("figure")
+    const div = content.querySelector("div")
+    if (mql.matches) {
+        div.insertBefore(fig, div.firstChild)
+      }
+    mql.onchange = (e) => {
+      if (e.matches) {
+        div.insertBefore(fig, div.firstChild)
+      } else {
+        content.insertBefore(fig, content.firstChild)
+      }
+    }
+  </script>
 </html>

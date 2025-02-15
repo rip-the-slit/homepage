@@ -126,7 +126,7 @@ footer {
   justify-content: center;
 }
 
-.hero > .content > figure {
+.hero > .content figure {
   max-width: max-content;
   flex-shrink: 0;
   position: relative;
@@ -135,14 +135,15 @@ footer {
   align-items: center;
 }
 
-.hero > .content > figure img, footer > img {
+.hero > .content figure img,
+footer > img {
   height: initial;
 }
 
 .hero > .content > div {
   background-color: white;
   align-self: center;
-  max-width: 80ch;
+  max-width: 700px;
   padding: 1cm 0.5cm;
 }
 
@@ -163,7 +164,7 @@ footer {
 .work ul {
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(10cm, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(8cm, 1fr));
   gap: 1cm;
 }
 
@@ -205,11 +206,16 @@ footer {
   background-color: #f472b6;
   color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 1cm;
 }
 
-footer :nth-child(3) {
-  margin-block: .5cm;
+footer > div {
+  max-width: 700px;
+}
+
+footer > div :nth-child(3) {
+  margin-block: 0.5cm;
 }
 
 footer > div a {
@@ -221,4 +227,52 @@ footer > div a {
 
 footer > div a img {
   height: 0.5cm;
+}
+
+@media (width <= 650px) {
+  .hero .content,
+  footer {
+    flex-direction: column;
+  }
+
+  .hero .content figure {
+    align-self: center;
+  }
+
+  footer > img {
+    margin-top: 1cm;
+  }
+}
+
+@media (650px < width <= 950px) {
+  .hero > .background {
+    height: calc(150% + 2cm);
+  }
+
+  .cinnamoroll {
+    transform: skewY(10deg) translateY(calc(50% - 2cm));
+  }
+
+  .hero .content {
+    margin-top: 2cm;
+  }
+  .hero .content figure {
+    float: left;
+    margin: 0 0.5cm 0.3cm 0;
+    transform-origin: 100% 100%;
+    transform: scale(1.1, 1.5);
+  }
+
+  .hero .content figure img {
+    max-height: 8cm;
+  }
+  .hero .content figcaption {
+    bottom: 70%;
+    transform: translateX(140%);
+    text-shadow: 0.1cm 0.3cm 0.3cm #02061756;
+  }
+
+  .hero .links {
+    justify-content: center;
+  }
 }
